@@ -1,0 +1,14 @@
+{
+  "name": "meza-lp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Landing page do MEZA: explica o projeto a quem vem da campanha de rua e leva ao app.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/smoke.mjs",
+    "capturas": "node scripts/capturas.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

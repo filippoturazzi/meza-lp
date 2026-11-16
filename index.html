@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#194B35">
+<title>MEZA · a mesa é de todos</title>
+<meta name="description" content="O MEZA liga quem quer ajudar às organizações que já levam comida a quem tem fome no Distrito Federal. Ajude com seu tempo, alimentos ou dinheiro.">
+<meta property="og:title" content="Puxa uma cadeira, DF.">
+<meta property="og:description" content="O MEZA liga quem quer ajudar às organizações que já levam comida a quem tem fome no Distrito Federal.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/svg+xml" href="src/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Outfit:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="logo" href="#inicio" aria-label="MEZA, início">meza</a>
+    <a class="btn btn-sol btn-p" href="https://meza-olive.vercel.app">Quero ajudar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="abre" id="inicio">
+  <div class="wrap abre-in">
+    <div class="abre-txt">
+      <h1>Puxa uma cadeira, <span class="df">DF.</span></h1>
+      <p class="abre-sub">O MEZA liga quem quer ajudar às organizações que já levam comida a quem tem fome no Distrito Federal. Você entra com o seu tempo, com alimentos ou com dinheiro.</p>
+      <div class="acoes">
+        <a class="btn btn-sol" href="https://meza-olive.vercel.app">Quero ajudar</a>
+        <a class="lk lk-claro" href="#o-que-fazemos">Como funciona</a>
+      </div>
+    </div>
+
+    <svg class="mesa" viewBox="0 0 520 450" role="img" aria-label="Uma mesa posta vista de cima, com toalha xadrez e oito pratos. Uma das cadeiras está puxada, com o recado: seu lugar.">
+      <defs>
+        <pattern id="xadrez" width="28" height="28" patternUnits="userSpaceOnUse">
+          <rect width="28" height="28" fill="#F5F1E7"/>
+          <rect width="14" height="28" fill="#D17C5B" opacity=".5"/>
+          <rect width="28" height="14" fill="#D17C5B" opacity=".5"/>
+        </pattern>
+        <g id="prato">
+          <circle r="25" fill="#FFFDF9"/>
+          <circle r="16" fill="none" stroke="#E0DACB" stroke-width="2"/>
+        </g>
+      </defs>
+      <g fill="#207D54">
+        <rect x="136" y="56" width="68" height="60" rx="16"/>
+        <rect x="226" y="56" width="68" height="60" rx="16"/>
+        <rect x="316" y="56" width="68" height="60" rx="16"/>
+        <rect x="136" y="296" width="68" height="60" rx="16"/>
+        <rect x="226" y="296" width="68" height="60" rx="16"/>
+        <rect x="50" y="172" width="60" height="68" rx="16"/>
+        <rect x="410" y="172" width="60" height="68" rx="16"/>
+      </g>
+      <g class="cadeira">
+        <rect x="316" y="296" width="68" height="60" rx="16" fill="#E9B96E"/>
+      </g>
+      <rect x="96" y="100" width="328" height="212" rx="20" fill="url(#xadrez)"/>
+      <use href="#prato" x="170" y="150"/>
+      <use href="#prato" x="260" y="150"/>
+      <use href="#prato" x="350" y="150"/>
+      <use href="#prato" x="170" y="262"/>
+      <use href="#prato" x="260" y="262"/>
+      <use href="#prato" x="350" y="262"/>
+      <use href="#prato" x="134" y="206"/>
+      <use href="#prato" x="386" y="206"/>
+      <g class="recado">
+        <path d="M452 372c-8 14-22 20-38 18" fill="none" stroke="#E9B96E" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M424 380l-11 8 12 6" fill="none" stroke="#E9B96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="408" y="360" fill="#E9B96E" font-family="Caveat, 'Segoe Script', cursive" font-weight="600" font-size="34">seu lugar</text>
+      </g>
+    </svg>
+  </div>
+  <div class="toalha" aria-hidden="true"></div>
+</section>
+
+<section class="sec" id="por-que">
+  <div class="wrap pq">
+    <div class="pq-txt">
+      <h2>No DF, a fome cresceu enquanto caía no resto do país.</h2>
+      <div class="pratos" role="img" aria-label="Quatro pratos: três servidos e um vazio.">
+        <span class="pr"></span><span class="pr"></span><span class="pr"></span><span class="pr pr-vazio"></span>
+      </div>
+      <p class="pq-frase">Em 2024, <strong>27%</strong> dos lares do DF viviam algum grau de insegurança alimentar. É mais de um em cada quatro.</p>
+    </div>
+    <dl class="pq-dados">
+      <div>
+        <dt>Distrito Federal</dt>
+        <dd><span class="de">23,5%</span><span class="para">27%</span></dd>
+        <dd class="nota">dos lares, de 2023 para 2024. Subiu.</dd>
+      </div>
+      <div>
+        <dt>Brasil</dt>
+        <dd><span class="de">27,6%</span><span class="para">24,2%</span></dd>
+        <dd class="nota">dos lares, no mesmo período. Caiu.</dd>
+      </div>
+      <div>
+        <dt>Gente</dt>
+        <dd><span class="para">845 mil</span></dd>
+        <dd class="nota">pessoas no DF vivem com algum nível de restrição alimentar, quase 100 mil a mais em um ano.</dd>
+      </div>
+    </dl>
+    <p class="fonte">Fontes: IBGE, PNAD Contínua (2023 e 2024), e levantamento da 6ª Conferência Distrital de Segurança Alimentar e Nutricional (2026), via Brasil de Fato.</p>
+  </div>
+</section>
+
+<section class="sec sec-sup" id="o-que-fazemos">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Já tem gente entregando. O MEZA leva você até elas.</h2>
+      <p>No DF, organizações cozinham e distribuem refeições toda semana. O que falta a elas são mãos, alimentos e dinheiro. Em vez de montar uma rede do zero, o MEZA mostra onde a sua ajuda faz falta.</p>
+    </div>
+    <ol class="elo">
+      <li>
+        <h3>Você ajuda</h3>
+        <p>Cozinha, separa, embala, doa alimentos ou doa dinheiro. Você escolhe o que cabe na sua semana.</p>
+      </li>
+      <li>
+        <h3>A organização entrega</h3>
+        <p>ONGs, coletivos e cozinhas comunitárias que já levam comida a quem precisa, e sabem onde ela falta.</p>
+      </li>
+      <li>
+        <h3>A refeição chega</h3>
+        <p>A pessoas em situação de rua e a famílias em insegurança alimentar no Distrito Federal.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec jeitos" id="como-ajudar">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Três jeitos de ajudar</h2>
+      <p>Pode ser um só, podem ser os três.</p>
+    </div>
+  </div>
+  <div class="faixa">
+    <ul class="wrap jeitos-l">
+      <li>
+        <span class="prato-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <div class="jeito">
+          <h3>Seu tempo</h3>
+          <p>Escolha uma ação, um posto e um turno. Tem cozinha, montagem de cestas, triagem de alimentos e embalagem de marmitas.</p>
+        </div>
+      </li>
+      <li>
+        <span class="prato-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg></span>
+        <div class="jeito">
+          <h3>Alimentos</h3>
+          <p>Veja o que cada ação está pedindo, escolha o item e a quantidade e entregue na sede do MEZA ou num ponto de coleta parceiro.</p>
+        </div>
+      </li>
+      <li>
+        <span class="prato-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+        <div class="jeito">
+          <h3>Dinheiro</h3>
+          <p>Doe por Pix, cartão ou em mãos. O valor vai para o MEZA ou para a ação que você escolher.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="no-app">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Do cadastro à vaga reservada, tudo no app</h2>
+      <p>O app abre no navegador do celular. Não precisa instalar nada.</p>
+    </div>
+    <ol class="passos">
+      <li>
+        <div class="passo-txt">
+          <span class="n" aria-hidden="true">1</span>
+          <h3>Cadastre-se e diga como quer ajudar</h3>
+          <p>São duas etapas. É preciso ter 16 anos ou mais, e a equipe do MEZA confere cada cadastro.</p>
+        </div>
+        <figure class="tela"><img src="assets/tela-cadastro.png" width="780" height="1688" loading="lazy" alt="Tela do app com a pergunta “Como você quer ajudar?” e as opções de voluntariado marcadas."></figure>
+      </li>
+      <li>
+        <div class="passo-txt">
+          <span class="n" aria-hidden="true">2</span>
+          <h3>Escolha a ação, o posto e o turno</h3>
+          <p>Cada ação mostra a data, o lugar, o que será feito e quantas vagas ainda há em cada posto.</p>
+        </div>
+        <figure class="tela"><img src="assets/tela-acao.png" width="780" height="1688" loading="lazy" alt="Tela do app com os detalhes de uma ação: data, horário, local e a escolha de posto e turno."></figure>
+      </li>
+      <li>
+        <div class="passo-txt">
+          <span class="n" aria-hidden="true">3</span>
+          <h3>Receba a confirmação</h3>
+          <p>A vaga fica reservada na hora, e você pode salvar a data no calendário do celular.</p>
+        </div>
+        <figure class="tela"><img src="assets/tela-confirmada.png" width="780" height="1688" loading="lazy" alt="Tela do app com a mensagem “Vaga reservada!” e o resumo da inscrição."></figure>
+      </li>
+    </ol>
+    <div class="acoes acoes-c">
+      <a class="btn btn-verde" href="https://meza-olive.vercel.app">Abrir o app</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec orgs" id="organizacoes">
+  <div class="wrap orgs-in">
+    <h2>Sua organização já leva comida a quem precisa?</h2>
+    <div class="orgs-txt">
+      <p>Cadastre-se como parceira e publique as próximas ações com data, horários, postos e os itens de que vocês precisam. Os voluntários se inscrevem e as doações chegam pelo MEZA. A equipe valida cada cadastro antes de a organização aparecer no app.</p>
+      <a class="btn btn-verde" href="https://meza-olive.vercel.app">Cadastrar organização</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="nome">
+  <div class="wrap nome-in">
+    <div class="cab">
+      <h2>Meza se lê “mesa”</h2>
+      <p>As iniciais dos nossos quatro valores formam o nome. E o nome diz o que a gente quer: que a mesa seja de todos.</p>
+    </div>
+    <ul class="valores">
+      <li><b>m</b>obilização</li>
+      <li><b>e</b>mpatia</li>
+      <li><b>z</b>elo</li>
+      <li><b>a</b>limentação</li>
+    </ul>
+  </div>
+</section>
+
+<section class="fecha">
+  <div class="toalha" aria-hidden="true"></div>
+  <div class="wrap fecha-in">
+    <h2>Sempre cabe mais um.</h2>
+    <p>Do Gama a Planaltina, tem gente esperando um prato. Escolha um horário e venha servir.</p>
+    <a class="btn btn-sol" href="https://meza-olive.vercel.app">Quero ajudar</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <div>
+      <p class="logo">meza</p>
+      <p class="lema">a mesa é de todos.</p>
+    </div>
+    <p>O MEZA é um projeto acadêmico de Henrique Tomáz e Filippo Turazzi para a disciplina Design Gráfico e User Experience do Ibmec Brasília, no 2º semestre de 2026. O app é um protótipo: cadastros, doações e pagamentos são simulados.</p>
+  </div>
+</footer>
+</body>
+</html>
