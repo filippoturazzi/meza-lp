@@ -39,20 +39,36 @@ try {
       assert.ok(t.includes(dado), `falta o dado "${dado}"`);
   });
 
-  await passo('as imagens carregam e têm texto alternativo', async () => {
-    await page.evaluate(async () => { for (const i of document.images) { i.loading = 'eager'; if (!i.complete) await new Promise(r => { i.onload = i.onerror = r; }); } });
-    const imgs = await page.locator('img').evaluateAll(els => els.map(i => ({ src: i.getAttribute('src'), alt: i.getAttribute('alt'), w: i.naturalWidth })));
-    assert.ok(imgs.length >= 3);
-    for (const i of imgs) { assert.ok(i.w > 0, `${i.src} não carregou`); assert.ok(i.alt && i.alt.length > 10, `${i.src} sem texto alternativo`); }
+  await passo('as ilustrações têm texto alternativo', async () => {
+    const figs = await page.locator('[role="img"]').evaluateAll(els => els.map(e => ({ c: e.getAttribute('class'), l: e.getAttribute('aria-label'), w: e.getBoundingClientRect().width })));
+    assert.ok(figs.filter(f => f.c === 'tela').length === 3, 'esperava as três telas do app');
+    for (const f of figs) { assert.ok(f.w > 0, `${f.c} não aparece`); assert.ok(f.l && f.l.length > 10, `${f.c} sem texto alternativo`); }
   });
 
   await passo('nada abaixo de 12 px e botões com 44 px de altura', async () => {
+    // As telas do app são ilustração (a figure tem o rótulo), então o texto miúdo delas não conta.
     const pequenos = await page.evaluate(() => [...document.querySelectorAll('body *')]
-      .filter(el => [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()) && !el.closest('svg') && parseFloat(getComputedStyle(el).fontSize) < 12)
+      .filter(el => [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()) && !el.closest('svg, .tela, dialog:not([open])') && parseFloat(getComputedStyle(el).fontSize) < 12)
       .map(el => el.tagName + '.' + el.className));
     assert.deepEqual(pequenos, []);
-    const baixos = await page.locator('a.btn').evaluateAll(els => els.filter(a => a.getBoundingClientRect().height < 44).map(a => a.textContent.trim()));
+    const baixos = await page.locator('a.btn:visible').evaluateAll(els => els.filter(a => a.getBoundingClientRect().height < 44).map(a => a.textContent.trim()));
     assert.deepEqual(baixos, []);
+  });
+
+  await passo('o menu do celular abre, leva à seção e fecha', async () => {
+    const menu = page.locator('#menu');
+    assert.equal(await menu.isVisible(), false);
+    await page.locator('[data-menu-abrir]').click();
+    assert.equal(await menu.isVisible(), true);
+    assert.equal(await page.locator('#menu .menu-links a').count(), 5);
+    const baixos = await page.locator('#menu a.btn').evaluateAll(els => els.filter(a => a.getBoundingClientRect().height < 44).length);
+    assert.equal(baixos, 0);
+    await page.locator('#menu a[href="#no-app"]').click();
+    assert.equal(await menu.isVisible(), false);
+    assert.ok(page.url().endsWith('#no-app'));
+    await page.locator('[data-menu-abrir]').click();
+    await page.locator('[data-menu-fechar]').click();
+    assert.equal(await menu.isVisible(), false);
   });
 
   for (const w of [320, 390, 768, 1280]) {

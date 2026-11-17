@@ -8,17 +8,20 @@ Projeto acadêmico do Ibmec Brasília. O protótipo do app fica na pasta vizinha
 
 ## Abrir
 
-Dê dois cliques em `index.html`. É HTML e CSS puros, sem etapa de build e sem JavaScript.
+Dê dois cliques em `index.html`. É HTML e CSS puros, sem etapa de build. O único JavaScript é o que abre o menu no celular.
+
+O desenho da página está no pen.dev (`meza-lp.pen`), nos frames “MEZA — Desktop”, “MEZA — Mobile” e “MEZA — Mobile Menu aberto”. Abaixo de 960 px de largura vale o desenho de celular.
 
 ## Estrutura
 
 | Caminho | Conteúdo |
 | --- | --- |
-| `index.html` | A página inteira, com os textos |
-| `src/styles.css` | Estilos. Os tokens de cor e fonte no `:root` são os mesmos de `meza-app/src/styles.css` |
-| `assets/` | Telas do protótipo usadas na seção “Do cadastro à vaga reservada” |
-| `scripts/capturas.mjs` | Refaz as telas de `assets/` a partir de `../meza-app` |
-| `tests/smoke.mjs` | Confere seções, botões, dados, imagens, tamanhos mínimos e rolagem horizontal |
+| `index.html` | A página inteira, com os textos, os ícones (Lucide, num sprite SVG) e as telas ilustradas do app |
+| `src/styles.css` | Estilos. Os tokens de cor no `:root` têm os mesmos nomes das variáveis do desenho |
+| `src/menu.js` | Abre e fecha o menu de tela cheia do celular |
+| `assets/` | Capturas do protótipo. A página não as usa mais: as telas da seção “Do cadastro à vaga reservada” agora são desenhadas em HTML |
+| `scripts/capturas.mjs` | Refaz as capturas de `assets/` a partir de `../meza-app` |
+| `tests/smoke.mjs` | Confere seções, botões, dados, ilustrações, menu, tamanhos mínimos e rolagem horizontal |
 | `docs/superpowers/` | Desenho e plano da página |
 
 ## Desenvolvimento
